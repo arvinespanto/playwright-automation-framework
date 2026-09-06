@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        BASE_URL = 'https://demo.playwright.dev/todomvc/'
+    }
+
     stages {
         stage('Install Dependencies') {
             steps {
