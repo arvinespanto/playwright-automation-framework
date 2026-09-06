@@ -1,0 +1,17 @@
+# Node
+node_modules/
+
+# Playwright
+playwright-report/
+test-results/
+blob-report/
+
+# Environment files / secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
