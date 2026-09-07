@@ -294,18 +294,84 @@ This project demonstrates practical experience with:
 * GitHub integration
 * Test reporting and debugging
 
-## Future Improvements
+## Planned Enhancements
+
+This automation framework will continue to evolve alongside my upcoming AI-powered portfolio project.
 
 Planned enhancements include:
 
-* GitHub webhook-triggered Jenkins builds
-* Smoke and regression test tagging
-* Parallel test execution strategy
-* Additional negative test scenarios
-* API testing with Playwright
-* Jenkins credential management
-* Automated deployment gates
-* Docker-based CI execution
+* **Migrate test coverage to my new personal portfolio application**
+
+  * Use the portfolio as a real application-under-test instead of relying only on a demo application
+  * Cover new features as they are developed and released
+
+* **AI-powered portfolio testing**
+
+  * Automate the **“Ask My AI”** feature where visitors can ask questions about my experience, skills, and projects
+  * Validate the UI and API integration of LLM-powered features
+  * Add test coverage for RAG-based responses and source retrieval
+  * Test loading states, error handling, invalid prompts, and API failures
+
+* **Interactive AI feature / game testing**
+
+  * Add automated coverage for AI-powered interactive experiences and games
+  * Validate user flows, session state, input handling, and expected UI behavior
+
+* **Smoke and regression test tagging**
+
+  * Introduce `@smoke` and `@regression` test groups as the test suite grows
+  * Run fast critical-path tests separately from the complete regression suite when appropriate
+
+* **Expanded negative and edge-case testing**
+
+  * Invalid inputs
+  * Network/API failures
+  * Empty states
+  * Error handling
+  * Boundary scenarios
+
+* **API testing with Playwright**
+
+  * Test backend endpoints independently from the UI
+  * Validate status codes, response schemas, authentication, and error responses
+  * Add API-level testing for the AI/RAG backend
+
+* **LLM and RAG quality validation**
+
+  * Separate deterministic Playwright UI testing from non-deterministic LLM response evaluation
+  * Validate retrieval relevance, grounded responses, and source attribution
+  * Explore automated evaluation strategies for AI-generated responses
+
+* **CI integration for portfolio releases**
+
+  * Trigger Jenkins automatically when changes are merged into the portfolio repository
+  * Run Playwright cross-browser regression tests after application changes
+  * Prevent releases from progressing when critical tests fail
+
+* **Jenkins credential management**
+
+  * Store API keys, LLM credentials, deployment tokens, and other secrets securely using Jenkins Credentials
+  * Keep sensitive configuration outside source control
+
+* **Staging and deployment quality gates**
+
+  * Build and deploy portfolio changes to a staging environment
+  * Run Playwright regression tests against the deployed application
+  * Allow production deployment only after required quality checks pass
+  * Support manual approval gates where appropriate
+
+* **Parallel test execution strategy**
+
+  * Introduce controlled parallel execution as the regression suite grows
+  * Maintain test isolation and avoid shared test-data conflicts
+
+* **Docker-based CI execution**
+
+  * Containerize the Playwright test environment
+  * Provide consistent browser and dependency versions across local and CI environments
+  * Reduce machine-specific configuration differences
+
+The long-term goal is to use this framework as part of an end-to-end engineering workflow:
 
 ## Author
 
